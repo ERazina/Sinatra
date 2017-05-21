@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - sinatra_dev@localhost" uuid="c7ffd91f-495b-4bc2-b4fa-e2e41c9ec026">
+      <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>elina4</user-name>
+      <resolve-scope>sinatra_dev:public,elina4</resolve-scope>
+    </data-source>
+    <data-source name="PostgreSQL - sinatra_test@localhost" uuid="82b4a7e7-68c7-493d-8db4-ce877628f0dd">
+      <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>elina4</user-name>
+      <resolve-scope>sinatra_test:public,elina4</resolve-scope>
+    </data-source>
+    <data-source name="PostgreSQL - sinatra_prod@localhost" uuid="6a33a6a6-6716-489c-b338-e2b77017b41a">
+      <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>elina4</user-name>
+      <resolve-scope>sinatra_prod:public,elina4</resolve-scope>
+    </data-source>
+  </component>
+</project>

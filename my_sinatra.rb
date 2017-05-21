@@ -6,9 +6,33 @@ require 'sinatra/namespace'
 # 3 stage - module run
 require 'sinatra/base'
 
-module MyAppModule  # 3 stage - module run
-  class App < Sinatra::Base  # 3 stage - module run
-    register Sinatra::Namespace   # 3 stage - module run
+require 'sequel'
+
+require 'sequel/extensions/seed'
+
+require 'pg'
+
+require 'json'
+
+require 'multi_json'
+
+
+DB = Sequel.connect(
+    adapter: :postgres,
+    database: 'sinatra_dev',
+    host: 'localhost',
+    password: 'password',
+    user: 'elina4',
+    max_connections: 10,
+# logger: Logger.new('log/db.log')
+)
+
+
+%w{controllers models routes}.each {|dir| Dir.glob("./#{dir}/*.rb", &method(:require))}
+
+# module MyAppModule  # 3 stage - module run
+#   class App < Sinatra::Base  # 3 stage - module run
+#     register Sinatra::Namespace   # 3 stage - module run
 
     # 1 main style
     get '/' do # Outside namespace
@@ -25,6 +49,14 @@ module MyAppModule  # 3 stage - module run
       "Hello, #{c}!"
     end
 
+    get '/say/*/to/*' do
+      params['splat'].to_s # => ["hello", 'world']
+    end
+
+    get '/jobs.?:format?' do
+      "Да, работает этот маршрут"
+    end
+
     # 2 params
     get "/hello/:name" do # Outside namespace
       # соответствует "GET /hello/foo" и "GET /hello/bar",
@@ -38,8 +70,8 @@ module MyAppModule  # 3 stage - module run
       end
     end
 
-  end  # 3 stage - module run
-end  # 3 stage - module run
+#   end  # 3 stage - module run
+# end  # 3 stage - module run
 
 
 

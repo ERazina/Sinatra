@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="PostgreSQL - sinatra_dev@localhost" uuid="c7ffd91f-495b-4bc2-b4fa-e2e41c9ec026">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/sinatra_dev</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - sinatra_test@localhost" uuid="82b4a7e7-68c7-493d-8db4-ce877628f0dd">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/sinatra_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - sinatra_prod@localhost" uuid="6a33a6a6-6716-489c-b338-e2b77017b41a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/sinatra_prod</jdbc-url>
+    </data-source>
+  </component>
+</project>
