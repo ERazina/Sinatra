@@ -53,7 +53,8 @@
     <schema id="17" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-timestamp>2017-05-20.12:08:31.315</introspection-timestamp>
+      <introspection-state-number>987</introspection-state-number>
+      <introspection-timestamp>2017-05-26.15:23:15.987</introspection-timestamp>
     </schema>
     <schema id="18" parent="1" name="pg_catalog">
       <object-id>11</object-id>
@@ -70,5 +71,15 @@
     <schema id="22" parent="1" name="information_schema">
       <object-id>12381</object-id>
     </schema>
+    <table id="23" parent="17" name="schema_info">
+      <object-id>16542</object-id>
+      <state-number>987</state-number>
+    </table>
+    <column id="24" parent="23" name="version">
+      <state-number>987</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>0</default-expression>
+    </column>
   </database-model>
 </dataSource>

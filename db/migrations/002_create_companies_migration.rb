@@ -1,14 +1,15 @@
 Sequel migration do
   change do
-    create_table(:companies) do
+    create_table!(:companies, ignore_index_errors=>true) do
       primary_key :id
       String :name, :text=>true, :null=>false
-      String :location, :text=>true, :null=>false
+      String :stack, :text=>true, :null=>false
+      TrueClass :resume, :default=>false
 
-      DateTime :created_at
-      DateTime :updated_at
+      DataTime :created_at
+      DiteTime :updated_at
 
-      index [:id]
+      inbox :id
     end
   end
 end
