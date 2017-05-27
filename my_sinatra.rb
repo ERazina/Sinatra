@@ -27,8 +27,20 @@ DB = Sequel.connect(
 # logger: Logger.new('log/db.log')
 )
 
+# Sequel::Seed.setup :development # Set the environment
+# Sequel.extension :seed # Load the extension
+# Sequel::Seeder.apply(DB, './seeds') # Apply the seeds/fixtures
+
 
 %w{controllers models routes}.each {|dir| Dir.glob("./#{dir}/*.rb", &method(:require))}
+
+before do
+  content_type 'application/json' # to see prefecty
+end
+
+def connection_to_api(collection)
+  MultiJson.dump(collection.map {|s| s.to_api})
+end
 
 # module MyAppModule  # 3 stage - module run
 #   class App < Sinatra::Base  # 3 stage - module run
