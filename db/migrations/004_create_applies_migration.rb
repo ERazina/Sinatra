@@ -1,17 +1,18 @@
-Sequel migration do
+
+Sequel.migration do
   change do
-    create_table!(:jobs, ignore_index_errors=>true) do
+    create_table!(:applies, :ignore_index_errors=>true) do
       primary_key :id
       TrueClass :read, :default=>false
       TrueClass :invited, :default=>false
       foreign_key :job_id, :jobs, :null=>false, :key=>[:id]
-      foreign_key :geeks_id, :geeks, :null=>false, :key=>[:id]
+      foreign_key :geek_id, :geeks, :null=>false, :key=>[:id]
 
+      DateTime :created_at
+      DateTime :upated_at
 
-      DataTime :created_at
-      DiteTime :updated_at
+      index [:id]
 
-      inbox :id
     end
   end
 end

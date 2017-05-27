@@ -1,15 +1,16 @@
-Sequel migration do
+Sequel.migration do
   change do
-    create_table!(:geeks, ignore_index_errors=>true) do
+    create_table!(:geeks, :ignore_index_errors=>true) do
       primary_key :id
-      String :name, :text=>true, :null=>false
-      String :stack, :text=>true, :null=>false
-      TrueClass :resume, :default=>false
+      String :name, :text=>true, :null => false
+      String :stack, :text=>true, :null => false
+      TrueClass :resume, :default => false
 
-      DataTime :created_at
-      DiteTime :updated_at
+      DateTime :created_at
+      DateTime :upated_at
 
-      inbox :id
+      index :id
+
     end
   end
 end
